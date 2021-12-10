@@ -50,7 +50,7 @@ function fn_get_orders_history($params, $items_per_page = 0) {
         'date' => ['?:orders_history_logs.timestamp', '?:orders_history_logs.order_id']
     ];
 
-    $sorting = db_sort($params, $sortings, 'editor', 'desc');
+    $sorting = db_sort($params, $sortings, 'date', 'desc');
 
     $join = "LEFT JOIN ?:users USING(user_id)";
 
